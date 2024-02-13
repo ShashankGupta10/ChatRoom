@@ -4,11 +4,11 @@ import { Server as SocketIOServer, Socket } from "socket.io";
 import cors from "cors";
 
 const app: Express = express();
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: "https://chatroom-sg-frontend" }));
 
 const server: http.Server = http.createServer(app);
 const io: SocketIOServer = new SocketIOServer(server, {
-  cors: { origin: "http://localhost:5173" },
+  cors: { origin: "https://chatroom-sg-frontend" },
 });
 
 const PORT: number = 3001;
