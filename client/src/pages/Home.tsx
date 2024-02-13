@@ -1,15 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import React from "react";
 
 const Home = () => {
   const navigate = useNavigate();
-  const [name, setName] = useState("");
+  const [name, setName] = useState<string>("");
 
   const handleRoute = () => {
     navigate("/chatroom");
     localStorage.setItem("name", name);
   };
-  
+
   return (
     <div className=" w-full h-full flex items-center justify-center p-4 fixed inset-0">
       <div
