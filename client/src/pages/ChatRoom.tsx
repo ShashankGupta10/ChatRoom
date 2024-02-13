@@ -6,7 +6,7 @@ interface Message {
   user: string;
 }
 
-const socket = io("https://chatroom-sg-backend.vercel.app/");
+const socket = io("https://chatroom-sg-backend.vercel.app");
 
 const Chatroom: React.FC = () => {
   const [message, setMessage] = useState<string>("");

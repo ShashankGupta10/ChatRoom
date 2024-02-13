@@ -8,7 +8,7 @@ app.use(cors({ origin: "https://chatroom-sg-frontend.vercel.app" }));
 
 const server: http.Server = http.createServer(app);
 const io: SocketIOServer = new SocketIOServer(server, {
-  cors: { origin: "https://chatroom-sg-frontend.vercel.app" },
+  cors: { origin: "*" },
 });
 
 const PORT: number = 3001;
