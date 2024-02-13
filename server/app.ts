@@ -4,11 +4,11 @@ import { Server as SocketIOServer, Socket } from "socket.io";
 import cors from "cors";
 
 const app: Express = express();
-app.use(cors({ origin: "https://chatroom-sg-frontend" }));
+app.use(cors({ origin: "https://chatroom-sg-frontend.vercel.app" }));
 
 const server: http.Server = http.createServer(app);
 const io: SocketIOServer = new SocketIOServer(server, {
-  cors: { origin: "https://chatroom-sg-frontend" },
+  cors: { origin: "https://chatroom-sg-frontend.vercel.app" },
 });
 
 const PORT: number = 3001;
